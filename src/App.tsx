@@ -11,6 +11,7 @@ import Signup from './component/Signup';
 import Signin from './component/Signin';
 import BookNow from './component/BookNow';
 import SelectProvider from './component/SelectProvider';
+import MyBookings from './component/MyBookings';
 
 // Creating the App that calls Header and Tasklist
 const App = () => {
@@ -40,7 +41,7 @@ const App = () => {
                                 element={<SelectProvider />} />
                             <Route
                                 path='/my-bookings'
-                                element={<SelectProvider />} />
+                                element={<MyBookings />} />
                             <Route
                                 path='*'
                                 element={

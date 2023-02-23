@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 
 function BookNow() {
+    const navigate = useNavigate();
     const urgencyOptions = ["ASAP", "Anytime", "1 week"];
     const provinceOptions = ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Northwest Territories", "Nova Scotia", "Nunavut", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon Territory"];
     const handleOnChange = (value: string): void => {
@@ -10,8 +12,9 @@ function BookNow() {
     const handleSelectOnChange = () => {
 
     }
-    const handleSignup = (): void => {
-
+    const handleBookNow = (): void => {
+        console.log("Navigating")
+        navigate('/select-provider')
     }
 
     return (
@@ -94,7 +97,7 @@ function BookNow() {
                                         </div>
                                     </div>
                                     <span className="btn btn-primary col-12 mt-2 mb-4 btn-service-master-bg text-dark"
-                                        onClick={handleSignup}>Select provider &gt;</span>
+                                        onClick={() => handleBookNow()}>Select provider &gt;</span>
                                 </div>
                             </div>
                         </div>

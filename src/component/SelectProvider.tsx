@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 
 import ProviderPlaceholder from '../assets/images/profile-image.png';
 
 function SelectProvider() {
+    const navigate = useNavigate();
     const handleOnChange = (): void => {
         throw new Error('Function not implemented.');
     }
@@ -10,8 +12,8 @@ function SelectProvider() {
     const handleSelectOnChange = () => {
 
     }
-    const handleSignup = (): void => {
-
+    const handleConfirmBooking = (): void => {
+        navigate('/my-bookings')
     }
 
     return (
@@ -52,7 +54,7 @@ function SelectProvider() {
                             <div className='row'>
                                 <div className='col-12'>
                                     <span className="btn btn-primary col-12 mt-2 mb-4 btn-service-master-bg text-dark"
-                                        onClick={handleSignup}>Confirm booking</span>
+                                        onClick={handleConfirmBooking}>Confirm booking</span>
                                 </div>
                             </div>
                         </div>
